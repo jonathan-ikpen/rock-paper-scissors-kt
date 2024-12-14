@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RockPaperScissorsV2Acctivity">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/game_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rock_paper_scissors"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/light_blue" />
+
+        <!-- Player vs Computer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginEnd="32dp">
+
+                <TextView
+                    android:id="@+id/player_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/player_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/red" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="32dp">
+
+                <TextView
+                    android:id="@+id/computer_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computer"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/computer_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Player and Computer Choices -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:id="@+id/player_choice_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Choice:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/player_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ? "
+                android:textSize="36sp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/computer_choice_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer's Choice:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/computer_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ? "
+                android:textSize="36sp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+
+        <!-- Result Message -->
+        <TextView
+            android:id="@+id/game_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Rock, Paper, or Scissors!"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Choices Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:id="@+id/rock_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Rock"
+                android:src="@drawable/rock" />
+
+            <ImageView
+                android:id="@+id/paper_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Paper"
+                android:src="@drawable/paper" />
+
+            <ImageView
+                android:id="@+id/scissors_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Scissors"
+                android:src="@drawable/scissor" />
+        </LinearLayout>
+
+</LinearLayout>
